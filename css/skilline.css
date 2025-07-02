@@ -8,12 +8,16 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Ganti warna kuning F48C06 dengan hijau terang */
 .bg-yellow-500 {
-    background-color: #F48C06;
+    background-color: #22C55E; /* Tailwind green-500 */
 }
 .text-yellow-500 {
-    color: #F48C06;
+    color: #22C55E; /* Tailwind green-500 */
 }
+
+/* Jika ingin warna lebih mirip dengan intensitas F48C06, bisa pakai #22C55E atau #16A34A (green-600) */
+
 .floating { 
     animation-name: floating; 
     animation-duration: 3s; 

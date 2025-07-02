@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekstrakurikuler - MTs Darussalam</title>
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Alpine -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/skilline.css" />
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="antialiased bg-cream font-poppins">
+    <!-- Navbar -->
+    <div x-data="{ open: false }" class="w-full text-gray-700 bg-cream relative z-50">
+        <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+            <div class="flex flex-row items-center justify-between py-6">
+                <div class="relative md:mt-8 flex items-center">
+                    <img src="img/logo-mts.png" alt="Logo MTS Darrusalam" class="h-16 z-40" />
+                    <a href="index.html" class="ml-4 text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">Mts Darrusalam</a>
+                </div>
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }" class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="index.html#home">Home</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="susunan-organisasi.html">Susunan Organisasi</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="index.html#mata-pelajaran">Mata Pelajaran</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline text-green-500 font-bold" href="ekstrakurikuler.html">Ekstrakurikuler</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Extracurricular Section -->
+    <section class="py-10 md:py-20 bg-cream min-h-screen" id="extracurricular">
+        <div class="container max-w-screen-xl mx-auto px-2 sm:px-4">
+            <div class="text-center mb-10 md:mb-16" data-aos="fade-down">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-darken mb-3 md:mb-4">Kegiatan Ekstrakurikuler</h2>
+                <p class="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto">Kembangkan bakat dan minat siswa melalui berbagai kegiatan ekstrakurikuler yang menarik dan bermanfaat</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10" data-aos="fade-up">
+                <!-- OSIM -->
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 sm:p-6 md:p-8 flex flex-col justify-between border-t-4 border-green-400">
+                    <div class="flex flex-col items-center">
+                        <div class="text-5xl mb-4 text-green-500"><i class="fas fa-quran"></i></div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-1">OSIM</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-4">Organisasi Intera Madrasah</p>
+                    </div>
+                    <div class="mb-2 sm:mb-4 text-gray-600 text-xs sm:text-sm">Organisasi Siswa Intra Madrasah (OSIM) adalah organisasi resmi yang dibentuk di lingkungan madrasah sebagai wadah bagi siswa untuk belajar berorganisasi, mengembangkan kepemimpinan, dan menyalurkan aspirasi serta kreativitas dalam berbagai kegiatan kesiswaan. OSIM berperan sebagai perwakilan siswa dalam menjembatani komunikasi antara siswa, guru, dan pihak madrasah.</div>
+                    <ul class="mb-2 sm:mb-4 space-y-1 sm:space-y-2">
+                        <li class="flex items-center text-green-500"><i class="fas fa-brain mr-2"></i> Melatih kepemimpinan dan tanggung jawab siswa sejak dini.</li>
+                        <li class="flex items-center text-green-500"><i class="fas fa-trophy mr-2"></i> Meningkatkan keterampilan komunikasi dan public speaking.</li>
+                        <li class="flex items-center text-green-500"><i class="fas fa-book-open mr-2"></i> Menanamkan nilai-nilai Islam dalam sikap dan perilaku.</li>
+                        <li class="flex items-center text-green-500"><i class="fas fa-users mr-2"></i> Menjadi wadah aspirasi dan kreativitas siswa.</li>
+                    </ul>
+                    <div class="mb-2 sm:mb-4">
+                        <div class="font-semibold text-darken mb-1 flex items-center text-xs sm:text-sm md:text-base"><i class="fas fa-calendar-alt mr-2"></i> Jadwal Kegiatan</div>
+                        <div class="flex justify-between text-xs sm:text-sm text-gray-500"><span>Senin - Jum'at</span><span>07:00 - 17:00 WIT</span></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-2 sm:mt-4 flex-col sm:flex-row gap-2 sm:gap-0">
+                        <a href="https://wa.me/6285244304050?text=Halo%20saya%20ingin%20daftar%20ekstrakurikuler%20OSIM%20di%20MTS%20Darrusalam" target="_blank" rel="noopener" class="w-full sm:w-auto text-center px-4 py-2 sm:px-5 sm:py-2 rounded-full bg-green-400 text-white text-sm sm:text-base font-semibold shadow hover:scale-105 transition">Bergabung</a>
+                        <div class="flex items-center text-yellow-400 font-bold text-xs sm:text-base"><span class="mr-1">★★★★★</span> <span class="text-gray-500 font-normal ml-1">4.8/5</span></div>
+                    </div>
+                </div>
+                <!-- Drumband -->
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 sm:p-6 md:p-8 flex flex-col justify-between border-t-4 border-red-400">
+                    <div class="flex flex-col items-center">
+                        <div class="text-5xl mb-4 text-red-500"><i class="fas fa-drum"></i></div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-1">Drumband</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-4">Marching Band & Musik</p>
+                    </div>
+                    <div class="mb-2 sm:mb-4 text-gray-600 text-xs sm:text-sm">Drumband adalah kegiatan musik ensemble yang melatih kekompakan, disiplin, dan kepemimpinan melalui pertunjukan musik yang memukau. Siswa belajar berbagai alat musik tiup dan perkusi.</div>
+                    <ul class="mb-2 sm:mb-4 space-y-1 sm:space-y-2">
+                        <li class="flex items-center text-red-500"><i class="fas fa-drum mr-2"></i> Teknik bermain drum dan perkusi</li>
+                        <li class="flex items-center text-red-500"><i class="fas fa-wind mr-2"></i> Alat musik tiup (trumpet, trombone)</li>
+                        <li class="flex items-center text-red-500"><i class="fas fa-flag mr-2"></i> Choreography dan formasi marching</li>
+                        <li class="flex items-center text-red-500"><i class="fas fa-medal mr-2"></i> Persiapan lomba dan pertunjukan</li>
+                    </ul>
+                    <div class="mb-2 sm:mb-4">
+                        <div class="font-semibold text-darken mb-1 flex items-center text-xs sm:text-sm md:text-base"><i class="fas fa-clock mr-2"></i> Jadwal Latihan</div>
+                        <div class="flex justify-between text-xs sm:text-sm text-gray-500"><span>Selasa</span><span>15:30 - 17:30 WIT</span></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-2 sm:mt-4 flex-col sm:flex-row gap-2 sm:gap-0">
+                        <a href="https://wa.me/6285244304050?text=Halo%20saya%20ingin%20daftar%20ekstrakurikuler%20Drumband%20di%20MTS%20Darrusalam" target="_blank" rel="noopener" class="w-full sm:w-auto text-center px-4 py-2 sm:px-5 sm:py-2 rounded-full bg-red-400 text-white text-sm sm:text-base font-semibold shadow hover:scale-105 transition">Bergabung</a>
+                        <div class="flex items-center text-yellow-400 font-bold text-xs sm:text-base"><span class="mr-1">★★★★☆</span> <span class="text-gray-500 font-normal ml-1">4.6/5</span></div>
+                    </div>
+                </div>
+                <!-- Pramuka -->
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 sm:p-6 md:p-8 flex flex-col justify-between border-t-4 border-yellow-500">
+                    <div class="flex flex-col items-center">
+                        <div class="text-5xl mb-4 text-yellow-500"><i class="fas fa-hiking"></i></div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-1">Pramuka</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-4">Gerakan Pramuka Indonesia</p>
+                    </div>
+                    <div class="mb-2 sm:mb-4 text-gray-600 text-xs sm:text-sm">Pramuka mengembangkan karakter kepemimpinan, kemandirian, dan cinta alam. Siswa belajar berbagai keterampilan hidup dan kepedulian sosial melalui kegiatan yang menyenangkan.</div>
+                    <ul class="mb-2 sm:mb-4 space-y-1 sm:space-y-2">
+                        <li class="flex items-center text-yellow-500"><i class="fas fa-compass mr-2"></i> Navigasi dan orienteering</li>
+                        <li class="flex items-center text-yellow-500"><i class="fas fa-fire mr-2"></i> Survival dan kemah</li>
+                        <li class="flex items-center text-yellow-500"><i class="fas fa-hand-holding-heart mr-2"></i> Kegiatan bakti sosial</li>
+                        <li class="flex items-center text-yellow-500"><i class="fas fa-leaf mr-2"></i> Pendidikan lingkungan hidup</li>
+                    </ul>
+                    <div class="mb-2 sm:mb-4">
+                        <div class="font-semibold text-darken mb-1 flex items-center text-xs sm:text-sm md:text-base"><i class="fas fa-map mr-2"></i> Jadwal Kegiatan</div>
+                        <div class="flex justify-between text-xs sm:text-sm text-gray-500"><span>Jumat</span><span>15:30 - 17:00 WIT</span></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-2 sm:mt-4 flex-col sm:flex-row gap-2 sm:gap-0">
+                        <a href="https://wa.me/6285244304050?text=Halo%20saya%20ingin%20daftar%20ekstrakurikuler%20Pramuka%20di%20MTS%20Darrusalam" target="_blank" rel="noopener" class="w-full sm:w-auto text-center px-4 py-2 sm:px-5 sm:py-2 rounded-full bg-yellow-500 text-white text-sm sm:text-base font-semibold shadow hover:scale-105 transition">Bergabung</a>
+                        <div class="flex items-center text-yellow-400 font-bold text-xs sm:text-base"><span class="mr-1">★★★★★</span> <span class="text-gray-500 font-normal ml-1">4.9/5</span></div>
+                    </div>
+                </div>
+                <!-- Tapak Suci -->
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 sm:p-6 md:p-8 flex flex-col justify-between border-t-4 border-blue-500">
+                    <div class="flex flex-col items-center">
+                        <div class="text-5xl mb-4 text-blue-500"><i class="fas fa-fist-raised"></i></div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-1">Tapak Suci</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-4">Putera Muhammadiyah</p>
+                    </div>
+                    <div class="mb-2 sm:mb-4 text-gray-600 text-xs sm:text-sm">Tapak Suci adalah seni bela diri tradisional Indonesia yang mengembangkan fisik, mental, dan spiritual siswa. Menggabungkan teknik bertarung dengan nilai-nilai akhlak mulia.</div>
+                    <ul class="mb-2 sm:mb-4 space-y-1 sm:space-y-2">
+                        <li class="flex items-center text-blue-500"><i class="fas fa-hand-paper mr-2"></i> Teknik dasar bela diri</li>
+                        <li class="flex items-center text-blue-500"><i class="fas fa-running mr-2"></i> Kondisi fisik dan flexibility</li>
+                        <li class="flex items-center text-blue-500"><i class="fas fa-heart mr-2"></i> Pembentukan karakter dan akhlak</li>
+                        <li class="flex items-center text-blue-500"><i class="fas fa-shield-alt mr-2"></i> Self defense dan kepercayaan diri</li>
+                    </ul>
+                    <div class="mb-2 sm:mb-4">
+                        <div class="font-semibold text-darken mb-1 flex items-center text-xs sm:text-sm md:text-base"><i class="fas fa-dumbbell mr-2"></i> Jadwal Latihan</div>
+                        <div class="flex justify-between text-xs sm:text-sm text-gray-500"><span>Jum'at</span><span>15:30 - 17:00 WIT</span></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-2 sm:mt-4 flex-col sm:flex-row gap-2 sm:gap-0">
+                        <a href="https://wa.me/6285244304050?text=Halo%20saya%20ingin%20daftar%20ekstrakurikuler%20Tapak%20Suci%20di%20MTS%20Darrusalam" target="_blank" rel="noopener" class="w-full sm:w-auto text-center px-4 py-2 sm:px-5 sm:py-2 rounded-full bg-blue-500 text-white text-sm sm:text-base font-semibold shadow hover:scale-105 transition">Bergabung</a>
+                        <div class="flex items-center text-yellow-400 font-bold text-xs sm:text-base"><span class="mr-1">★★★★☆</span> <span class="text-gray-500 font-normal ml-1">4.7/5</span></div>
+                    </div>
+                </div>
+                <!-- Hadrah -->
+                <div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-4 sm:p-6 md:p-8 flex flex-col justify-between border-t-4 border-purple-500">
+                    <div class="flex flex-col items-center">
+                        <div class="text-5xl mb-4 text-purple-500"><i class="fas fa-mosque"></i></div>
+                        <h3 class="text-lg sm:text-xl md:text-2xl font-semibold mb-1">Hadrah</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-4">Seni Musik Islam</p>
+                    </div>
+                    <div class="mb-2 sm:mb-4 text-gray-600 text-xs sm:text-sm">Hadrah adalah seni musik tradisional Islam yang memadukan vokal, rebana, dan instrumen musik lainnya untuk menyampaikan pesan-pesan keagamaan dengan cara yang indah dan menyentuh hati.</div>
+                    <ul class="mb-2 sm:mb-4 space-y-1 sm:space-y-2">
+                        <li class="flex items-center text-purple-500"><i class="fas fa-microphone mr-2"></i> Teknik vokal dan harmonisasi</li>
+                        <li class="flex items-center text-purple-500"><i class="fas fa-drum mr-2"></i> Bermain rebana dan marawis</li>
+                        <li class="flex items-center text-purple-500"><i class="fas fa-book-quran mr-2"></i> Shalawat dan lagu-lagu Islami</li>
+                        <li class="flex items-center text-purple-500"><i class="fas fa-stage mr-2"></i> Performance dan panggung</li>
+                    </ul>
+                    <div class="mb-2 sm:mb-4">
+                        <div class="font-semibold text-darken mb-1 flex items-center text-xs sm:text-sm md:text-base"><i class="fas fa-prayer-hands mr-2"></i> Jadwal Latihan</div>
+                        <div class="flex justify-between text-xs sm:text-sm text-gray-500"><span>Rabu & Jumat</span><span>15:30 - 17:00 WIT</span></div>
+                        <div class="flex justify-between text-xs sm:text-sm text-gray-500"><span>Sabtu</span><span>19:00 - 21:00 WIT</span></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-2 sm:mt-4 flex-col sm:flex-row gap-2 sm:gap-0">
+                        <a href="https://wa.me/6285244304050?text=Halo%20saya%20ingin%20daftar%20ekstrakurikuler%20Hadrah%20di%20MTS%20Darrusalam" target="_blank" rel="noopener" class="w-full sm:w-auto text-center px-4 py-2 sm:px-5 sm:py-2 rounded-full bg-purple-500 text-white text-sm sm:text-base font-semibold shadow hover:scale-105 transition">Bergabung</a>
+                        <div class="flex items-center text-yellow-400 font-bold text-xs sm:text-base"><span class="mr-1">★★★★★</span> <span class="text-gray-500 font-normal ml-1">4.8/5</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="mt-32 w-full" style="background-color: rgba(37, 38, 65, 1);">
+        <div class="flex flex-col items-center justify-center py-12 text-white">
+            <img src="img/logo-mts.png" alt="Logo MTS Darrusalam" class="w-16 h-16 mb-2" />
+            <div class="flex items-center text-gray-400 text-sm justify-center mt-4">
+                <a href="" class="pr-3">Careers</a>
+                <a href="" class="border-l border-gray-400 px-3">Privacy</a>
+                <a href="" class="border-l border-gray-400 pl-3">Terms & Conditions</a>
+            </div>
+            <div class="text-center text-white">
+                <p class="my-3 text-gray-400 text-sm">2025 Badryansah Bangsawan. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- AOS init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('activityModal');
+        const modalIcon = document.getElementById('modalIcon');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalSubtitle = document.getElementById('modalSubtitle');
+        const modalContent = document.getElementById('modalContent');
+        function showModal(activity) {
+            const activityData = {
+                osim: {
+                    icon: 'fas fa-quran',
+                    title: 'OSIM',
+                    subtitle: 'Olimpiade Sains Islam Madrasah',
+                    content: `
+                        <h3 class='font-bold mb-2'>Tentang OSIM</h3>
+                        <p>Olimpiade Sains Islam Madrasah (OSIM) adalah program unggulan yang mempersiapkan siswa untuk menghadapi kompetisi akademik tingkat regional dan nasional. Program ini menggabungkan pembelajaran sains modern dengan nilai-nilai ke-Islaman.</p>
+                        <h3 class='font-bold mt-4 mb-2'>Bidang Kompetisi</h3>
+                        <ul class='list-disc ml-6'>
+                            <li>Matematika Islam</li>
+                            <li>IPA Terpadu</li>
+                            <li>Bahasa Arab</li>
+                            <li>Fiqh dan Ushul Fiqh</li>
+                            <li>Sejarah Kebudayaan Islam</li>
+                        </ul>
+                        <h3 class='font-bold mt-4 mb-2'>Prestasi</h3>
+                        <p>Tim OSIM MTs Darussalam telah meraih berbagai prestasi di tingkat kabupaten dan provinsi, termasuk juara 1 Matematika Islam tingkat Provinsi Papua tahun 2024.</p>
+                    `,
+                    waText: 'OSIM'
+                },
+                drumband: {
+                    icon: 'fas fa-drum',
+                    title: 'Drumband',
+                    subtitle: 'Marching Band & Musik',
+                    content: `
+                        <h3 class='font-bold mb-2'>Tentang Drumband</h3>
+                        <p>Organisasi Intera Madrasah, Adalah sebuah ekstrakulikuler yang mengembangkan keterampilan musik</p>
+                        <h3 class='font-bold mt-4 mb-2'>Bidang Kompetisi</h3>
+                        <ul class='list-disc ml-6'>
+                            <li>Matematika Islam</li>
+                            <li>IPA Terpadu</li>
+                            <li>Bahasa Arab</li>
+                            <li>Fiqh dan Ushul Fiqh</li>
+                            <li>Sejarah Kebudayaan Islam</li>
+                        </ul>
+                        <h3 class='font-bold mt-4 mb-2'>Prestasi</h3>
+                        <p>Tim OSIM MTs Darussalam telah meraih berbagai prestasi di tingkat kabupaten dan provinsi, termasuk juara 1 Matematika Islam tingkat Provinsi Papua tahun 2024.</p>
+                    `,
+                    waText: 'Drumband'
+                },
+                pramuka: {
+                    icon: 'fas fa-hiking',
+                    title: 'Pramuka',
+                    subtitle: 'Gerakan Pramuka Indonesia',
+                    content: `
+                        <h3 class='font-bold mb-2'>Tentang Pramuka</h3>
+                        <p>Pramuka mengembangkan karakter kepemimpinan, kemandirian, dan cinta alam. Siswa belajar berbagai keterampilan hidup dan kepedulian sosial melalui kegiatan yang menyenangkan.</p>
+                        <h3 class='font-bold mt-4 mb-2'>Bidang Kompetisi</h3>
+                        <ul class='list-disc ml-6'>
+                            <li>Navigasi dan orienteering</li>
+                            <li>Survival dan kemah</li>
+                            <li>Kegiatan bakti sosial</li>
+                            <li>Pendidikan lingkungan hidup</li>
+                        </ul>
+                        <h3 class='font-bold mt-4 mb-2'>Prestasi</h3>
+                        <p>Pramuka telah meraih berbagai prestasi di tingkat kabupaten dan provinsi, termasuk juara 1 Pramuka tingkat Provinsi Papua tahun 2024.</p>
+                    `,
+                    waText: 'Pramuka'
+                },
+                'tapak-suci': {
+                    icon: 'fas fa-fist-raised',
+                    title: 'Tapak Suci',
+                    subtitle: 'Putera Muhammadiyah',
+                    content: `
+                        <h3 class='font-bold mb-2'>Tentang Tapak Suci</h3>
+                        <p>Tapak Suci adalah seni bela diri tradisional Indonesia yang mengembangkan fisik, mental, dan spiritual siswa. Menggabungkan teknik bertarung dengan nilai-nilai akhlak mulia.</p>
+                        <h3 class='font-bold mt-4 mb-2'>Bidang Kompetisi</h3>
+                        <ul class='list-disc ml-6'>
+                            <li>Teknik dasar bela diri</li>
+                            <li>Kondisi fisik dan flexibility</li>
+                            <li>Pembentukan karakter dan akhlak</li>
+                            <li>Self defense dan kepercayaan diri</li>
+                        </ul>
+                        <h3 class='font-bold mt-4 mb-2'>Prestasi</h3>
+                        <p>Tapak Suci telah meraih berbagai prestasi di tingkat kabupaten dan provinsi, termasuk juara 1 Tapak Suci tingkat Provinsi Papua tahun 2024.</p>
+                    `,
+                    waText: 'Tapak Suci'
+                },
+                hadrah: {
+                    icon: 'fas fa-mosque',
+                    title: 'Hadrah',
+                    subtitle: 'Seni Musik Islam',
+                    content: `
+                        <h3 class='font-bold mb-2'>Tentang Hadrah</h3>
+                        <p>Hadrah adalah seni musik tradisional Islam yang memadukan vokal, rebana, dan instrumen musik lainnya untuk menyampaikan pesan-pesan keagamaan dengan cara yang indah dan menyentuh hati.</p>
+                        <h3 class='font-bold mt-4 mb-2'>Bidang Kompetisi</h3>
+                        <ul class='list-disc ml-6'>
+                            <li>Teknik vokal dan harmonisasi</li>
+                            <li>Bermain rebana dan marawis</li>
+                            <li>Shalawat dan lagu-lagu Islami</li>
+                            <li>Performance dan panggung</li>
+                        </ul>
+                        <h3 class='font-bold mt-4 mb-2'>Prestasi</h3>
+                        <p>Hadrah telah meraih berbagai prestasi di tingkat kabupaten dan provinsi, termasuk juara 1 Hadrah tingkat Provinsi Papua tahun 2024.</p>
+                    `,
+                    waText: 'Hadrah'
+                }
+            };
+            const data = activityData[activity] || {
+                icon: 'fas fa-star',
+                title: 'Detail Kegiatan',
+                subtitle: 'Informasi lengkap',
+                content: '<p>Detail kegiatan akan ditampilkan di sini.</p>',
+                waText: ''
+            };
+            modalIcon.innerHTML = `<i class='${data.icon}'></i>`;
+            modalTitle.textContent = data.title;
+            modalSubtitle.textContent = data.subtitle;
+            modalContent.innerHTML = data.content;
+            // Update WhatsApp link di modal
+            var waBtn = document.getElementById('modalWaBtn');
+            if (waBtn) {
+                let waMsg = 'Halo saya ingin daftar ekstrakurikuler ' + (data.waText ? data.waText : '') + ' di MTS Darrusalam';
+                waBtn.href = 'https://wa.me/6285244304050?text=' + encodeURIComponent(waMsg);
+            }
+            modal.classList.remove('hidden');
+        }
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+        function registerActivity() {
+            const spinner = document.getElementById('loadingSpinner');
+            spinner.classList.remove('hidden');
+            setTimeout(() => {
+                spinner.classList.add('hidden');
+                closeModal();
+                alert('Pendaftaran berhasil!');
+            }, 1200);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susunan Organisasi - MTs Darrusalam</title>
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Alpine -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Custom style -->
+    <link rel="stylesheet" href="css/skilline.css" />
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body class="antialiased bg-cream text-gray-700">
+    <!-- navbar -->
+    <div x-data="{ open: false }" class="w-full text-gray-700 bg-cream relative z-50">
+        <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
+            <div class="flex flex-row items-center justify-between py-6">
+                <div class="relative md:mt-8 flex items-center">
+                    <img src="img/logo-mts.png" alt="Logo MTS Darrusalam" class="h-16 z-40" />
+                    <a href="index.html" class="ml-4 text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">Mts Darrusalam</a>
+                </div>
+                <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{ 'transform md:transform-none': !open, 'h-full': open }" class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-end md:flex-row origin-top duration-300 scale-y-0">
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="index.html#home">Home</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="susunan-organisasi.html">Susunan Organisasi</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="index.html#mata-pelajaran">Mata Pelajaran</a>
+                <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="ekstrakurikuler.html">Ekstrakurikuler</a>
+            </nav>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden mt-16 mb-16">
+        <div class="text-center my-12">
+            <h1 class="text-4xl font-bold mb-4 text-darken">Struktur Organisasi <span class="text-green-400">MTs Darrusalam</span></h1>
+            <p class="text-gray-500 max-w-2xl mx-auto">Berikut adalah susunan organisasi MTs Darrusalam Serui. Anda dapat drag & drop setiap posisi untuk menyesuaikan tampilan sesuai kebutuhan.</p>
+        </div>
+        <div class="flex flex-col items-center space-y-10">
+            <!-- Level 1: Head of Madrasah -->
+            <div class="flex flex-col items-center">
+                <div class="bg-gradient-to-r from-green-600 to-green-400 text-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-4">Ketua Yayasan<br><span class="font-normal text-base">H. Najamuddin Yusuf</span></div>
+                <div class="text-gray-500 mb-2">Kepemimpinan menyeluruh dan arahan strategis institusi</div>
+            </div>
+            <!-- Level 2: Principal -->
+            <div class="flex flex-col items-center">
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-4 border border-green-200">Kepala Madrasah<br><span class="font-normal text-base">Drs. H. Muchtar</span></div>
+                <div class="text-gray-500 mb-2">Kepemimpinan akademik dan manajemen operasional harian</div>
+            </div>
+            <!-- Level 3: Vice Principal and Administrative Staff -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Wakil Kepala Madrasah<br><span class="font-normal text-base">Irwan, S.Pd</span><div class="text-gray-500 font-normal text-sm mt-2">Asisten kepala sekolah, pengawasan kurikulum</div></div>
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Bendahara<br><span class="font-normal text-base">Marsyanti, S.Hum</span><div class="text-gray-500 font-normal text-sm mt-2">Manajemen keuangan dan perencanaan anggaran</div></div>
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Sekretaris<br><span class="font-normal text-base">Saldi Ramli, A.Ma</span><div class="text-gray-500 font-normal text-sm mt-2">Koordinasi administrasi dan dokumentasi</div></div>
+            </div>
+            <!-- Level 4: Department Heads and Specialized Staff -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Guru BK<br><span class="font-normal text-base">Ustazah Aisha Ibrahim</span><div class="text-gray-500 font-normal text-sm mt-2">Layanan bimbingan dan konseling siswa</div></div>
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Koordinator Akademik<br><span class="font-normal text-base">Ustaz Yusuf Ahmed</span><div class="text-gray-500 font-normal text-sm mt-2">Perencanaan kurikulum dan standar akademik</div></div>
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Kepala Studi Islam<br><span class="font-normal text-base">Ustaz Ibrahim Malik</span><div class="text-gray-500 font-normal text-sm mt-2">Kurikulum Islam dan program keagamaan</div></div>
+            </div>
+            <!-- Level 5: Teachers and Support Staff -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Guru Senior<br><span class="font-normal text-base">Tenaga Pengajar</span><div class="text-gray-500 font-normal text-sm mt-2">Pendidik berpengalaman dan spesialis mata pelajaran</div></div>
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Pustakawan<br><span class="font-normal text-base">Sr. Maryam Hassan</span><div class="text-gray-500 font-normal text-sm mt-2">Manajemen perpustakaan dan dukungan penelitian</div></div>
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Koordinator IT<br><span class="font-normal text-base">Br. Othman Ali</span><div class="text-gray-500 font-normal text-sm mt-2">Dukungan teknologi dan sumber daya digital</div></div>
+                <div class="bg-white rounded-xl shadow-lg px-8 py-6 font-bold text-xl mb-2 border border-green-200">Manajer Fasilitas<br><span class="font-normal text-base">Br. Salim Abdullah</span><div class="text-gray-500 font-normal text-sm mt-2">Pemeliharaan dan operasional fasilitas</div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="mt-32 w-full" style="background-color: rgba(37, 38, 65, 1);">
+        <div class="flex flex-col items-center justify-center py-12 text-white">
+            <img src="img/logo-mts.png" alt="Logo MTS Darrusalam" class="w-16 h-16 mb-2" />
+            <div class="flex items-center text-gray-400 text-sm justify-center mt-4">
+                <a href="" class="pr-3">Careers</a>
+                <a href="" class="border-l border-gray-400 px-3">Privacy</a>
+                <a href="" class="border-l border-gray-400 pl-3">Terms & Conditions</a>
+            </div>
+            <div class="text-center text-white">
+                <p class="my-3 text-gray-400 text-sm">2025 Badryansah Bangsawan. </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
