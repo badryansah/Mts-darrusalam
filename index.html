@@ -39,7 +39,7 @@
     <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="susunan-organisasi.html">Susunan Organisasi</a>
     <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="#mata-pelajaran">Mata Pelajaran</a>
     <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-900 focus:outline-none focus:shadow-outline" href="ekstrakurikuler.html">Ekstrakurikuler</a>
-</nav>
+    </nav>
         </div>
     </div>
 	<div id="home" class="bg-cream">
@@ -201,16 +201,40 @@
         <p class="text-gray-500 mb-10 text-lg">
             Mari kita bekerja dan berkarya dengan mengharap ridho-Nya dan keikhlasan yang tulus demi menyiapkan generasi bangsa yang berintegritas dan berprestasi.
         </p>
-        <div class="flex flex-col sm:flex-row gap-10">
-            <div class="text-center">
-                <span class="block text-4xl font-bold text-darken">190+</span>
-                <span class="block text-gray-500 text-base font-semibold mt-1">Jumlah Siswa</span>
-            </div>
-            <div class="text-center">
-                <span class="block text-4xl font-bold text-darken">63+</span>
-                <span class="block text-gray-500 text-base font-semibold mt-1">Rata-Rata Pendaftar/Tahun</span>
-            </div>
-        </div>
+        <!-- Animated Numbers Statistik -->
+<div class="flex flex-col sm:flex-row gap-10">
+    <div class="text-center">
+        <span id="jumlahSiswa" class="block text-4xl font-bold text-darken">0</span>
+        <span class="block text-gray-500 text-base font-semibold mt-1">Jumlah Siswa</span>
+    </div>
+    <div class="text-center">
+        <span id="jumlahPendaftar" class="block text-4xl font-bold text-darken">0</span>
+        <span class="block text-gray-500 text-base font-semibold mt-1">Rata-Rata Pendaftar/Tahun</span>
+    </div>
+</div>
+
+<script>
+function animateValue(id, start, end, duration) {
+    const obj = document.getElementById(id);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.textContent = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        } else {
+            obj.textContent = end + "+"; 
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    animateValue("jumlahSiswa", 0, 190, 1200);
+    animateValue("jumlahPendaftar", 0, 63, 1200);
+});
+</script>
     </div>
 </div>
 
